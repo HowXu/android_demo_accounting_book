@@ -37,7 +37,7 @@ android {
      * 启用 View Binding（视图绑定）功能。
      * 这是 Android Studio 提供的一个编译时特性，用于更安全、更方便地替代传统的 findViewById() 方式访问界面控件。
      */
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
@@ -60,6 +60,8 @@ dependencies {
     implementation("com.github.Dimezis:BlurView:version-2.0.6")
     // Progress Bar 组件
     implementation("com.mikhaellopez:circularprogressbar:3.1.0")
+    // 直接加载图片支持
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // lifecycle 管理组件生命周期
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")

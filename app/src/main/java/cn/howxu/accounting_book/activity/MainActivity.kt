@@ -1,4 +1,4 @@
-package cn.howxu.accounting_book
+package cn.howxu.accounting_book.activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

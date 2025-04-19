@@ -1,14 +1,9 @@
-package cn.howxu.accounting_book
+package cn.howxu.accounting_book.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updatePadding
 import cn.howxu.android_demo_accounting_book.databinding.ActivityIntroBinding
 
 /**
@@ -49,7 +44,7 @@ class IntroActivity : AppCompatActivity() {
 
         // 这个就是getStart的监听器 监听到了就会跳转到MainActivity的页面 上下文设置为自己
         bind.getStart.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }
