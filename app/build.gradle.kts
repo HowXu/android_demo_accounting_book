@@ -55,11 +55,15 @@ dependencies {
     // androidTestImplementation(libs.androidx.junit)
     // androidTestImplementation(libs.androidx.espresso.core)
 
-    // 这俩货不在maven central
+    // 这俩货不在maven central的 而且用了以前的android support 这里要把多余的class排除
     // 视图组件
-    implementation("com.github.Dimezis:BlurView:release-1.0.2")
+    implementation("com.github.Dimezis:BlurView:release-1.0.2"){
+        exclude("com.android.support","support-v4")
+    }
     // Progress Bar 组件
-    implementation("com.mikhaellopez:circularprogressbar:3.1.0")
+    implementation("com.mikhaellopez:circularprogressbar:3.1.0"){
+        exclude("com.android.support","support-v4")
+    }
 
     // lifecycle 管理组件生命周期
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
@@ -68,6 +72,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
 
     // ViewModel 知道VUE吧 这个组件也是响应的
-    implementation("androidx.activity:activity-ktx:1.10.1")
-    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 }
