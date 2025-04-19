@@ -57,13 +57,9 @@ dependencies {
 
     // 这俩货不在maven central的 而且用了以前的android support 这里要把多余的class排除
     // 视图组件
-    implementation("com.github.Dimezis:BlurView:release-1.0.2"){
-        exclude("com.android.support","support-v4")
-    }
+    implementation("com.github.Dimezis:BlurView:version-2.0.6")
     // Progress Bar 组件
-    implementation("com.mikhaellopez:circularprogressbar:3.1.0"){
-        exclude("com.android.support","support-v4")
-    }
+    implementation("com.mikhaellopez:circularprogressbar:3.1.0")
 
     // lifecycle 管理组件生命周期
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
