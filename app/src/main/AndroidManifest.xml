@@ -13,13 +13,16 @@
         android:theme="@style/Theme.Androiddemoaccountingbook"
         tools:targetApi="31">
         <activity
+            android:name="cn.howxu.accounting_book.activity.ReportActivity"
+            android:exported="false" />
+        <activity
             android:name="cn.howxu.accounting_book.activity.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name="cn.howxu.accounting_book.activity.MainActivity"
