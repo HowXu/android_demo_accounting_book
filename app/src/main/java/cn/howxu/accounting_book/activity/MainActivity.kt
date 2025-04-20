@@ -10,6 +10,7 @@ import cn.howxu.accounting_book.adapter.ExpenseListAdapter
 import cn.howxu.accounting_book.viewModel.MainViewModel
 //noinspection SuspiciousImport
 import android.R
+import android.content.Intent
 import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import cn.howxu.android_demo_accounting_book.databinding.ActivityMainBinding
@@ -41,9 +42,17 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
 
+        setVarable()
+
         initRecycleView()
         // 在这之后 从视图到数据都有完整的控制链在 并且自动处理 自动渲染
         setBlueEffect()
+    }
+
+    private fun setVarable() {
+        binding.cardBtn.setOnClickListener {
+            startActivity(Intent(this, ReportActivity::class.java))
+        }
     }
 
     /**
@@ -56,6 +65,7 @@ class MainActivity : AppCompatActivity() {
     private fun setBlueEffect() {
         // 定义模糊的强度（值越大越模糊）
         val radius = 10f
+
         /**
          * decorView：当前窗口的根视图（包括状态栏、导航栏和内容区域）。
          * android.R.id.content：系统预定义的 ID，指向 FrameLayout（即内容区域的根布局，不包括状态栏/导航栏）。

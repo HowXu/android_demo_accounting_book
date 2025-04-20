@@ -24,5 +24,6 @@ class MainViewModel(val repository: MainRepository): ViewModel() {
 
     // 直接等号等价于拿返回值
     fun loadDta() = repository.items
+    fun loadBudgets() = repository.budgets
 
 }
