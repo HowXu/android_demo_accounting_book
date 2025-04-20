@@ -39,7 +39,7 @@
 
     <TextView
         android:id="@+id/title_text"
-        android:layout_width="57dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Title"
@@ -54,12 +54,11 @@
         android:id="@+id/pic"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/light_blue_bg"
         android:padding="16dp"
-        app:srcCompat="@drawable/img1"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
