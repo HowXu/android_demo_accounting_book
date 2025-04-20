@@ -42,5 +42,13 @@ class MainActivity : AppCompatActivity() {
         binding.reView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         // 传入数据由ViewModel控制 页面由Adapter控制 Adapter从view_holder_items拿布局进行渲染
         binding.reView.adapter = ExpenseListAdapter(mainViewModel.loadDta())
+        // 加了这个之后ScrollView和RecycleView绑定 不会分开滑动 但是会限制渲染组件数量
+        // 禁用嵌套滚动（Nested Scrolling）
+        // 父容器是 NestedScrollView，子视图是 RecyclerView。
+        // 当子视图滚动到顶部/底部时，父容器可以继续滚动（反之亦然）
+        // 在MainActivity RecycleView加个底部向上70dp 不让导航栏和列表项重叠
+        // 这里把ScrollView替换成NestedScrollView的重写版本FullScrollView 可以根据需求动态调整渲染高度
+        // RecycleView layout_height因为wrap_content
+        binding.reView.isNestedScrollingEnabled = false
     }
 }
